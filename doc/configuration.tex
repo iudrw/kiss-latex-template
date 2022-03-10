@@ -1,0 +1,78 @@
+\documentclass[10pt, a4paper, twoside]{report}
+\author{André Silva}
+
+    % Look up the manual for
+    % any packages:
+    % https://ctan.org/pkg/PACKAGE
+
+% ============================
+%       📄
+%       MARGINS, SPACING
+%       PARAGRAPHS
+% ============================
+
+\usepackage[margin=1.0in]{geometry}
+    % The package provides an easy and flexible user interface to customize page layout.
+
+% ============================
+%       📚
+%       LANGUAGE
+%       BIBLIOGRAPHY
+% ============================
+
+\usepackage[utf8]{inputenc}
+    % The package translates various standard and other input encodings into a ‘LATEX internal language’. UTF-8 input encoding.
+\usepackage[main=portuguese,english]{babel}
+    % This package manages culturally-determined typographical (and other) rules for a wide range of languages. I set the language to danish using babel, to ensure proper quoting and hyphenation.
+\usepackage{csquotes}
+    % The csquotes package supplies typographically correct quotations instead of backticks and apostrophes.
+\usepackage[style=numeric,backend=biber]{biblatex}
+    % BibLATEX is a complete reimplementation of the bibliographic facilities provided by LATEX.
+    \DeclareLanguageMapping{english}{english-apa} % This command maps a babel/polyglossia language identifier to an lbx file
+    % *************** My Bibliography Files ***************
+    \addbibresource{doc/thesis.bib}
+    \addbibresource{doc/examples.bib}
+
+% ============================
+%       ✍🏽
+%       FONTS
+%       MATH
+% ============================
+
+\usepackage{color}
+    % The color package provides both foreground and background colour management.
+    % *************** 🔴🟢🔵 COLORS ***************
+    \definecolor{mygreen}{rgb}{0,0.6,0}
+\usepackage{amsmath}
+    % American Mathematical Society Math Extensions
+
+% ============================
+%       🖼️
+%       FIGURES, TABLES
+%       CODE BLOCKS
+% ============================
+
+\usepackage{float}
+    % Improves the interface for defining floating objects such as figures and tables.
+\usepackage{graphicx}
+    % The package for inclusion of graphics in LATEX documents.
+    % *************** Setting figures location/path ***************
+    \graphicspath{{figures/}}
+\usepackage[export]{adjustbox}
+    % The package provides several macros to adjust boxed content (e.g. vertical alignment of figures).
+\usepackage{array}
+    % An extended implementation of the array and tabular environments which extends the options for column formats, and provides “programmable” format specifications.
+
+% ============================
+%       🪛
+%       CHANGE PACKAGE
+%       BEHAVIOURS
+% ============================
+
+\usepackage{etoolbox}
+    %The package is a toolbox of programming facilities geared primarily towards LATEX class and package authors.
+    %
+    % *************** Chapters without new page ***************
+    %\makeatletter
+    %\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}
+    %\makeatother

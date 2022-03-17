@@ -1,18 +1,23 @@
+\documentclass[12pt, a4paper, twoside]{report}
+\author{John Smith}
+
 \input{doc/configuration}
+% =======================================================
 \begin{document}
-% =======================================================
 \input{doc/cover}
-% =======================================================
+\input{doc/preface}
+% -------------------------------------------------------
+%
+%
 
 \chapter{Introduction}
 
-Hello World!
+This a new LaTex Document.
 
-% =======================================================
-% A few latex examples
-\input{doc/examples}
 %
-\nocite{*} % Print (* = all) sources, even if not cited.
-\printbibliography
-% =======================================================
+%
+% -------------------------------------------------------
+\input{extra/latex/examples}
+\input{doc/bibliography}
 \end{document}
+% =======================================================

@@ -1,0 +1,68 @@
+{
+    "recommendations": [
+        "ban.spellright",
+        "james-yu.latex-workshop"
+    ],
+    "files.exclude": {
+        "**/.*": true
+    },
+    "spellright.language": [
+        "en",
+        "pt"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex"
+    ],
+    "latex-workshop.latex.outDir": "%DIR%/.build",
+    "latex-workshop.latex.autoBuild.run": "onSave",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-xelatex",
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=.build",
+                "%DOC%"
+            ],
+            "env": {},
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "--input-directory=.build",
+                "--output-directory=.build",
+                "%DOCFILE%"
+            ],
+            "env": {},
+        },
+        /*
+        {
+            "name": "movepdf",
+            "command": "cmd.exe",
+            "args": [
+                "/c",
+                "copy",
+                ".\\.build\\%DOCFILE%.pdf",
+                ".\\"
+            ],
+            "env": {},
+        }
+        */
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk -> biber -> latexmk",
+            "tools": [
+                "latexmk",
+                "biber",
+                "latexmk"/*,
+                "movepdf"*/
+            ]
+        }
+    ],
+}

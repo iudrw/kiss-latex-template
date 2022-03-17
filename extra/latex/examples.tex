@@ -1,0 +1,46 @@
+% A few latex examples
+
+\chapter{This is the chapter name}
+  
+\vspace{1 cm}
+
+\section{This is a section}
+    
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.3\linewidth, valign=t, frame]{latex.png}
+    \caption{My Caption}
+    \label{alabel}
+\end{figure}
+
+This is a citation \cite{reference_name_3} to a good source. And there's also this Figure \ref{alabel} to simplify the explanation.
+
+“Nature’s first {\color{mygreen} green} is gold.” - \textit{Robert Frost}
+
+\subsection{Testing fonts}
+
+What about a few brand icons? {\fontawesome\fontshape{brands}\selectfont\symbol{"F17C} \symbol{"F841} \symbol{"F4E4}}
+
+\bigskip
+
+{   
+    \fontbadcomic 
+    \fontsize{20pt}{24pt} \selectfont
+    To use new fonts, XeLaTeX compiler is preferable!
+}
+
+\section{VS Code Tips}
+
+\begin{itemize}
+    \item ctrl+s ctrl+k (opens keyboard shortcuts configuration)
+    \item ctrl+shift+p (opens quick commands)
+    \item ctrl+k ctrl+o (opens a folder)
+    \item ctrl+b (hides sidebar)
+    \item ctrl+shift+' (opens a new terminal)
+    \item ctrl+k z (opens zen mode)
+    \item .vscode local folder contains a settings file that applies only to this folder / workspace
+\end{itemize}
+
+\section{Charts!}
+
+\wheelchart{20/green/good, 10/yellow/medium, 9/red/bad, 5/white/neutral}{Ratings}{1.8cm}{2.2cm}{gray}{black}

@@ -17,17 +17,21 @@ This is a citation \cite{reference_name_3} to a good source. And there's also th
 
 “Nature’s first {\color{mygreen} green} is gold.” - \textit{Robert Frost}
 
-\subsection{Testing fonts}
+\ifdefined \loadedFonts
 
-What about a few brand icons? {\fontawesome\fontshape{brands}\selectfont\symbol{"F17C} \symbol{"F841} \symbol{"F4E4}}
+    \subsection{Testing fonts}
 
-\bigskip
+    What about a few brand icons? {\fontawesome\fontshape{brands}\selectfont\symbol{"F17C} \symbol{"F841} \symbol{"F4E4}}
 
-{   
-    \fontbadcomic 
-    \fontsize{20pt}{24pt} \selectfont
-    To use new fonts, XeLaTeX compiler is preferable!
-}
+    \bigskip
+
+    {   
+        \fontbadcomic 
+        \fontsize{20pt}{24pt} \selectfont
+        To use new fonts, XeLaTeX compiler is preferable!
+    }
+
+\fi
 
 \section{VS Code Tips}
 
@@ -41,6 +45,10 @@ What about a few brand icons? {\fontawesome\fontshape{brands}\selectfont\symbol{
     \item .vscode local folder contains a settings file that applies only to this folder / workspace
 \end{itemize}
 
-\section{Charts!}
+\ifdefined \loadedWheelchart
 
-\wheelchart{20/green/good, 10/yellow/medium, 9/red/bad, 5/white/neutral}{Ratings}{1.8cm}{2.2cm}{gray}{black}
+    \section{Charts!}
+
+    \wheelchart{20/green/good, 10/yellow/medium, 9/red/bad, 5/white/neutral}{Ratings}{1.8cm}{2.2cm}{gray}{black}
+
+\fi

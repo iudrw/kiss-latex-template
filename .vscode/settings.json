@@ -4,7 +4,7 @@
         "james-yu.latex-workshop"
     ],
     "files.exclude": {
-        "**/.*": true
+        "**/.*": false
     },
     "spellright.language": [
         "en",
